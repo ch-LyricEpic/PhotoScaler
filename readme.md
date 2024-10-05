@@ -7,6 +7,16 @@
 3.在完成照片操作后确保计算机安装Python 3.x, 并确保```requirements.txt```中所有Python库都已安装.随后运行```main.py```.没有被编号的自然格式图片在此时将被自动编号.  
 4.运行正常后即可访问```index.html```.
 
+### 代码说明
+**这是我拿来练手的小项目 所以代码很史 见谅哈。**  
+· 带下划线的三个程序一般是subprocess内容, 无需独立运行, 已被```main.py```集成  
+
+· ```data.txt```和```script.js```都是由本程序自动生成的必需文件, 其中```data.txt```直接记录```/assets```下所有图片的文件名, ```script.js```即为三件套(```index.html```,```style.css```,```script.js```)之一,由```backup.js```进行填充imageFiles得到(我只是为了规避一个很愚蠢的 CORS 问题,但这样我觉得也是一种很清新脱俗的实现方式,直接隔离开可变数据把js框架单独拎出来维护,算是一种尝试?)  
+
+· ```debugtool-localserver.py```是debugtool.用于快速建立localhost服务器.  
+
+· ```requirements.txt```中存放了本项目所依赖的Python库名称.  
+
 ### 待办
 1.美化UI    
 2.实现DESCRIPTION参数对```.```的支持.  
