@@ -2,6 +2,8 @@ body {
     font-family: 'AfacadFlux', 'Noto Serif SC', Arial, sans-serif;
     background-color: #f0f8ff; /* 浅蓝色背景 */
     color: #333;
+    margin: 0; /* 移除默认边距 */
+    padding: 0; /* 移除默认内边距 */
 }
 
 #title {
@@ -49,25 +51,49 @@ body {
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
-    flex-direction: row-reverse; /* 奇数项反向排列 */
+    flex-direction: row-reverse;
 }
 
 .timeline-image {
     width: 150px;
     height: 150px;
-    object-fit: cover; /* 保证图片自动裁剪为相同大小 */
+    object-fit: cover; 
     cursor: pointer;
-    border: 2px solid #007BFF; /* 蓝色边框 */
+    border: 5px solid transparent; 
     border-radius: 8px;
+    background: linear-gradient(45deg, #f5a9a9, #c8f0c8, #858ffb, #e075ea);
+    background-clip: padding-box;
+    border-image: linear-gradient(45deg, #f5a9a9, #c8f0c8, #858ffb, #e075ea) 1; 
+    transition: transform 0.3s ease, border-image 0.3s ease;
 }
+
+.timeline-image:hover {
+    transform: scale(1.05); 
+}
+
 
 .timeline-text {
-    margin-left: 20px; /* 图片和文字之间的间距 */
-    margin-right: 20px; /* 保持左右间距 */
-    text-align: center; /* 文字居中 */
+    margin-left: 20px; 
+    margin-right: 20px; 
+    text-align: center; 
 }
 
-/* 模态框样式 */
+.banner {
+    width: 100vw;
+    height: 250px; 
+    overflow: hidden;
+    margin: 0;
+    padding: 0; 
+}
+
+.banner-image {
+    width: 100vw; 
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+    display: block;
+}
+
 .modal {
     display: none;
     position: fixed;

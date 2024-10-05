@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const imageFolder = 'assets/'; 
-    const imageFiles = [
-        '1-[2023 11 18]Chiikawa.jpg',
-        '2-寒假了吗 原来已经寒假了.jpg',
-        '3-IP Nanjing.jpg',
-        '4-IP Indonesia.jpg'
-    ];
+    const imageFiles = [];
 
     const timelineContent = document.getElementById("timeline-content");
 

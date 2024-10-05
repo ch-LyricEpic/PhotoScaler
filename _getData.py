@@ -1,7 +1,7 @@
 import os
 from natsort import natsorted
-current_directory = os.path.dirname(os.path.abspath(__file__))
-files = [f for f in os.listdir(current_directory+'/assets') if os.path.isfile(os.path.join(current_directory+'/assets', f))]
+cd = os.path.dirname(os.path.abspath(__file__))
+files = [f for f in os.listdir(cd+'/assets') if os.path.isfile(os.path.join(cd+'/assets', f))]
 files = natsorted(files)
 
 print('[WORKFLOW 0002] **Creating Images Path**')

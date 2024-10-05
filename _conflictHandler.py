@@ -1,8 +1,8 @@
 import os
 import re
 print ('[WORKFLOW 0001] **Handling Images ID Conflict.**')
-current_dir = os.path.dirname(os.path.abspath(__file__))
-folder_path = os.path.join(current_dir, 'assets')
+cd = os.path.dirname(os.path.abspath(__file__))
+folder_path = os.path.join(cd, 'assets')
 pattern = re.compile(r'(\d+)-(.*)\.(\w+)$')
 files = os.listdir(folder_path)
 file_info = []
@@ -16,7 +16,8 @@ for file_name in files:
         file_format = match.group(3)   
         file_info.append((file_id, description, file_format, file_name))
     else:
-        unlabeled_files.append(file_name)
+        if (file_name == 'assetsDescription') == 0:
+            unlabeled_files.append(file_name)
         
 file_info.sort(key=lambda x: x[0])
 
